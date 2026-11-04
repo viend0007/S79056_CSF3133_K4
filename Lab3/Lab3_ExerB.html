@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ticket Booking</title>
+</head>
+
+<body>
+
+	<!--Error Corrections
+	Line 1: missing html in DOCTYPE.
+	Line 9: incorrect span and h1 closing tags.
+	Line 11: used span instead of div for content.
+	Line 13: incorrect html entities for < and &.
+	Line 18: typo emial changed to email.
+	Line 18: added required attribute to email.
+	Line 22-24: datalist ID didn't match input list.
+	Line 32: range min and max values were reversed.
+	Line 33: incorrect output for attribute.
+	Line 38: incorrect copyright entity.
+	Line 175: duplicate closing body and html tags.
+	lind 14: changed calculation to use numeric values.
+	-->
+	
+	<!--header-->
+	<div id="header">
+	
+		<h1>e-Ticket <span> Your Campus Cinema</span></h1>
+		
+		<p>Welcome to Campus Cinema!</p>
+		
+	</div>
+	
+	<!--navigations-->
+	<div id="nav">
+	
+		<a href="lab3_ExerB.html">Home</a> |
+		<a href="movies.html">Now Showing</a>
+	</div>
+	
+	<!--contents-->
+	<div id="content">
+		
+		<h2>Book Your Ticket</h2>
+		
+		<p>Promotion: tickets &lt; RM10 for students &amp; staff!</p>
+		
+		<!--ticket booking form-->
+		<form action="booking.php"
+		oninput="total.value = adult.valueAsNumber + child.valueAsNumber;
+		price.value = (adult.valueAsNumber * 12) + (child.valueAsNumber * 8)">
+			
+			<!--customer info-->
+			<label for="name">Name:</label>
+			<input type="text" id="name" name="name"
+					placeholder="Enter your name"
+					required autofocus>
+			<br><br>
+			
+			<label for="email">E-mail:</label>
+			<input type="email" id="email" name="email" required>
+			<br><br>
+			
+			<!--phone number-->
+			<label for="phone">Phone number:</label>
+			<input type="tel" id="phone" name="phone"
+					placeholder="Enter your phone number"
+					required>
+			<br><br>
+			
+			<!--booking date and time-->
+			<label for="date">Show Date:</label>
+			<input type="date" id="date" name="date">
+			<br><br>
+			
+			<label for="time">Show Time:</label>
+			<input type="time" id="time" name="time">
+			<br><br>
+			
+			<!--movie selection-->
+			<label for="movie">Movie:</label>
+			<input type="text" id="movie" name="movie" list="movies">
+			
+			<datalist id="movies">
+				<option value="Space Rangers">
+				<option value="Kampung Comedy">
+				<option value="The Last Adventure">
+			</datalist>
+			
+			<br><br>
+			
+			<!--adult tickets-->
+			<label for="adult">Adult Tickets (RM12 each):</label>
+			<input type="number" id="adult" name="adult"
+					min="0" value="0">
+			<br><br>
+			
+			<!--child tickets-->
+			<label for="child">Child Tickets (RM8 each):</label>
+			<input type="number" id="child" name="child"
+					min="0" value="0">
+			<br><br>
+			
+			<!--service rating-->
+			<label for="rating">Rate Our Service:</label>
+			<input type="range" id="rating" name="rating"
+					min="1" max="5" step="1">
+			<br><br>
+			
+			<!--total ticket calculator-->
+			<h3>Booking Summary</h3>
+			
+			<label>Total Tickets:</label>
+			<output name="total" for="adult child">0</output>
+			<br><br>
+			
+			<!--subtmit button-->
+			<input type="submit" value="Book Now">
+		</form>
+	</div>
+	
+	<!--foooter-->
+	<div id="footer">
+	
+		<p>
+			e-Ticket&reg; &ndash; Campus Cinema
+			&lt; RM10 every Tuesday &amp; every week
+		</p>
+		
+		<p>&copy; 2026 CineKampus. All rights reserved.</p>
+	
+	</div>
+</body>
+</html>
