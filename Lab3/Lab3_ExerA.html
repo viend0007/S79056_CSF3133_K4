@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Chentaku Bakery Online Order</title>
+</head>
+<body>
+	
+	<!------header section------>
+	<div id="header">
+		<h1>ChentakuBakery &reg; <soan>Freshly Baked, Made with Cinta!</span></h1>
+		<p>Welcome to our campus bakery.</p>
+	</div>
+	
+	<!------navigations--------->
+	<div id="nav">
+		<a href="#home">Home</a> |
+		<a href="#price">Price List</a> |
+		<a href="#order">Order Now</a>
+	</div>
+	
+	<!------contents----------->
+	<div id="content">
+	
+		<h2 id="home">About Us, Chentaku Bakery</h2>
+		
+		<p>
+			Welcome to <stromg>Chentaku Bakery</strong>!
+			We provide <em>fresh</em> and <em>delicious</em>cakes and breads
+			for students. Visit our 
+			<span>online bakery</span> to place your order today!
+		</p>
+		
+		<!------order form---->
+		<div id="order">
+			<h2>Customer Order Form</h2>
+			
+			<form oninput="total.value = (cupcakes.valueAsNumber * 3) + (slices.valueAsNumber * 5)">
+			
+			<!-------customer info----->
+			<label for="customer">Customer Name:</label>
+			<input type="tel" id="phone" required>
+			<br><br>
+			
+			<label for="email">E-mail:</label>
+			<input type="email" id="email" name="email" required>
+			<br><br>
+			
+			<!------pick up detail----->
+			<label for="date">Pick-up Date:</label>
+			<input type="date" id="date" name="date">
+			<br><br>
+			
+			<label for="time">Pick-up Time:</label>
+			<input list="flavours" id="flavour" name="flavour">
+			
+			<datalist id="flavours">
+				<option value="Chocolate">
+				<option value="Vanilla">
+				<option value="Strawberry">
+				<option value="Red Velvet">
+			</datalist>
+			<br><br>
+			
+			<!------icing colour----->
+			<label for="colour">Icing Colour:</label>
+			<input type="color" id="colour" name="colour">
+			<br><br>
+			
+			<!------Sweetness Level----->
+			<label for="sweetness">Sweetness Level (1-5):</label>
+			<input type="range" id="sweetness" name="sweetness"
+				min="1"! max="5" step="1">
+			<br><br>
+			
+			<!-----price calculator---->
+			<h2>Calculate Your Order</h2>
+			
+			<label for="cupcakes">Cupcakes (RM3.00 each):</label>
+			<input type="number" id="cupcakes" name="cupcakes"
+				min="0" value="0">
+			<br><br>
+			
+			<label>Total Price: RM </label?
+			<output name="total" for="cupcakes slices">0</output>
+			
+			<br><br>
+			
+			<!-------submit buttons------>
+			<input type="submit" value="Submit Order">
+		
+		</form>
+	</div>
+</div>
+
+<div id="sidebar"> 
+	<h2 id="price">Price List</h2>
+	
+	<ul>
+		<li>Chocolate Cupcake - RM 3.00</li>
+		<li>Vanilla Cupcake - RM 3.00</li>
+		<li>Strawberry Cupcake - RM 3.00</li>
+		<li>Red Velvet Cake Slice - RM 5.00</li>
+	</ul>
+	
+	<p>Orders &gt; 10 pieces get a free drink!</p>
+</div>
+
+<!-----footer------>
+<div id="footer">
+	<p>
+		ChentakuBakery &reg; &nbsp; | Freshly Baked &amp; delicious
+	</p>
+	<p>&copy; 2026 ChentakuBakery. All right reserved.</p>
+	<p>Price shown in &pound; is for demonstration only.</p>
+</div>
+
+</body>
+</html>
+		
